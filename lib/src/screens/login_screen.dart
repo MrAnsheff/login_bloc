@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "../blocs/provider.dart";
+import "../blocs/bloc.dart";
 
 class LoginScreen extends StatelessWidget {
   Widget build(context) {
@@ -19,7 +20,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget emailField(bloc) {
+  Widget emailField(Bloc bloc) {
     return StreamBuilder(
       stream: bloc.email,
       builder: (context, snapshot) {
@@ -36,7 +37,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget passwordField(bloc) {
+  Widget passwordField(Bloc bloc) {
     return StreamBuilder(
       stream: bloc.password,
       builder: (context, snapshot) {
@@ -52,7 +53,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget submitButton(bloc) {
+  Widget submitButton(Bloc bloc) {
     return StreamBuilder(
         stream: bloc.formValid,
         builder: (context, snapshot) {
